@@ -7,7 +7,6 @@ public class Auto extends Fahrzeug{
     public Auto(String marke, int ps, String typ, int sitze) {
         super(marke, ps, typ);
         setSitze(sitze);
-
     }
 
     public void setSitze(int _sitze) {
@@ -15,5 +14,9 @@ public class Auto extends Fahrzeug{
     }
     public int getSitze() {
         return _sitze;
+    }
+
+    public String getSpezial() {
+        return "" + _sitze;
     }
 }

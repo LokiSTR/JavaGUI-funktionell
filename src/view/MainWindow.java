@@ -108,31 +108,25 @@ public class MainWindow {
         }
 
         for(Fahrzeug a : getMainController().getFahrzeuge()){
-            if(a instanceof Auto){
-                Auto a_temp = (Auto) a;
-                model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getSitze()});
-            }
-            else if(a instanceof LKW){
-                LKW a_temp = (LKW) a;
-                model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getLast()});
-            }
-            else if(a instanceof Motorrad){
-                Motorrad a_temp = (Motorrad) a;
-                model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getReifenanzahl()});
-            }
+        Auto a_temp = (Auto) a;
+            model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getSitze()});
+        
+        LKW l_temp = (LKW) a;
+            model.addRow(new Object[]{l_temp.getMarke(), l_temp.getPs(), l_temp.getTyp(), l_temp.getLast()});
+        
+        Motorrad m_temp = (Motorrad) a;                model.addRow(new Object[]{m_temp.getMarke(), m_temp.getPs(), m_temp.getTyp(), m_temp.getReifenanzahl()});
         }
+    
 
         for(Personen b : getMainController().getPersonen()){
-            if(b instanceof Kunde){
-                Kunde b_temp = (Kunde) b;
-                model.addRow(new Object[]{b_temp.getVorname(), b_temp.getNachname(), b_temp.getAlter(), b_temp.getKundennummer()});
-            }
-            else if(b instanceof Verkaeufer){
-                Verkaeufer b_temp = (Verkaeufer) b;
-                model.addRow(new Object[]{b_temp.getVorname(), b_temp.getNachname(), b_temp.getAlter(), b_temp.getPersonalnummer()});
-            }
-        }
+        Kunde k_temp = (Kunde) b;
+            model.addRow(new Object[]{k_temp.getVorname(), k_temp.getNachname(), k_temp.getAlter(), k_temp.getKundennummer()});
+
+        Verkaeufer v_temp = (Verkaeufer) b;
+            model.addRow(new Object[]{v_temp.getVorname(), v_temp.getNachname(), v_temp.getAlter(), v_temp.getPersonalnummer()});
+        }    
     }
+    
 
     // Zeigt oder versteckt (toggle) das Hauptfenster
     public void toggleMainWindow(){

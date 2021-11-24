@@ -15,5 +15,10 @@ public class Kunde extends Personen{
     public int getKundennummer() {
         return _kundennummer;
     }
+
+    @Override
+    public String getSpezial() {
+        return "" + _kundennummer;
+    }
     
 }

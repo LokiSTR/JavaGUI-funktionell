@@ -1,6 +1,6 @@
 package model.Personen;
 
-public class Personen {
+public abstract class Personen {
     String _vorname;
     String _nachname;
     int _alter;
@@ -11,6 +11,10 @@ public class Personen {
         setNachname(nachname);
         setAlter(alter);
     }
+
+    public abstract String getSpezial();
+
+
     public void setNachname(String _nachname) {
         this._nachname = _nachname;
     }

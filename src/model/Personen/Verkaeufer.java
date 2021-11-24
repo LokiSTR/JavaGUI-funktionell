@@ -14,5 +14,9 @@ public class Verkaeufer extends Personen {
     public void setPersonalnummer(int _personalnummer) {
         this._personalnummer = _personalnummer;
     }
+    @Override
+    public String getSpezial() {
+        return "" + _personalnummer;
+    }
     
 }

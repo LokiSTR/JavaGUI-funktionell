@@ -19,5 +19,9 @@ public class Motorrad extends Fahrzeug{
         return _reifenanzahl;
     }
 
+    public String getSpezial() {
+        return "" + _reifenanzahl;
+    }
+
 
 }

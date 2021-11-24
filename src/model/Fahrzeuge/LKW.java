@@ -15,5 +15,8 @@ public class LKW extends Fahrzeug {
     public int getLast() {
         return _last;
     }
+    public String getSpezial() {
+        return "" + _last;
+    }
     
 }

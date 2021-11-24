@@ -1,6 +1,6 @@
 package model.Fahrzeuge;
 
-public class Fahrzeug {
+public abstract class Fahrzeug {
     String _marke;
     int _ps;
     String _typ;
@@ -12,6 +12,10 @@ public class Fahrzeug {
         setTyp(typ);
     }
 
+
+    public abstract String getSpezial();
+
+    
     /**
      * 
      * SETTER UND GETTER
